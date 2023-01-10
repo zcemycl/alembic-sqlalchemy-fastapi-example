@@ -26,6 +26,10 @@ class DbAccess:
         """
         if self.backend == "sqlite":
             url = """{backend}:///{database}.db"""
+        else:
+            url = """
+{backend}://{user}:{pwd}@{host}:{port}/{database}?sslmode=verify-ca
+"""
 
         return url.format(
             backend=self.backend,

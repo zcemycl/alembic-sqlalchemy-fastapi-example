@@ -3,7 +3,14 @@ from sqlmodel import Session, SQLModel, select
 from alembic_sqlalchemy_fastapi_example.definitions.database import DbAccess
 from alembic_sqlalchemy_fastapi_example.definitions.dataclasses import Visitor
 
-engine = DbAccess(backend="sqlite", database="database").return_engine()
+engine = DbAccess(
+    backend="sqlite",
+    user="user",
+    pwd="1234",
+    host="localhost",
+    port=6666,
+    database="database",
+).return_engine()
 
 SQLModel.metadata.create_all(engine)
 
