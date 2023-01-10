@@ -1,0 +1,12 @@
+Generic single-database configuration.
+
+### Database Migration
+```
+alembic upgrade head
+```
+
+
+### References
+1. [Get Started With Alembic SQLAlchemy](https://www.kimsereylam.com/sqlalchemy/2019/10/18/get-started-with-alembic.html)
+2. [Schema migrations with Alembic, Python and PostgreSQL](https://www.compose.com/articles/schema-migrations-with-alembic-python-and-postgresql/)
+3. [FastAPI with Async SQLAlchemy, SQLModel, and Alembic](https://testdriven.io/blog/fastapi-sqlmodel/)
