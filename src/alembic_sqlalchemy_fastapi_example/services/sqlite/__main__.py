@@ -12,7 +12,10 @@ engine = DbAccess(
     database="database",
 ).return_engine()
 
-SQLModel.metadata.create_all(engine)
+SQLModel.metadata.create_all(
+    engine,
+    tables=[SQLModel.metadata.tables["visitor"]],
+)
 
 visit_1 = Visitor(ip="220.246.206.4", topic="Knowledge Graph")
 visit_2 = Visitor(ip="220.246.206.4", topic="Chatapp")
