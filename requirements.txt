@@ -1,3 +1,10 @@
 sqlmodel
 sqlalchemy
 alembic
+fastapi
+uvicorn
+typing
+orjson
+logzero
+asyncio
+pydantic

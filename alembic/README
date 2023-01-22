@@ -5,8 +5,41 @@ Generic single-database configuration.
 alembic upgrade head
 ```
 
+### How to start?
+1. Initialise the database.
+    ```
+    alembic init alembic
+    # change alembic.ini sqlalchemy.url
+    sqlalchemy.url = sqlite:///database.db
+    # change env.py, to import SQLModel and your dataclasses
+    # change target_metadata
+    import sqlmodel
+    from sqlmodel import SQLModel
+    from alembic_sqlalchemy_fastapi_example.definitions.dataclasses import Visitor
+    target_metadata = SQLModel.metadata
+    # commit revision
+    alembic revision --autogenerate -m 'init database'
+    # import sqlmodel in versions/ if necessary
+    import sqlmodel
+    # upgrade now
+    alembic upgrade head
+    ```
+2. Continuous Deployment
+    ```
+    # Edit your dataclasses and import them
+    # Revision and Upgrade
+    alembic revision --autogenerate -m 'new message'
+    alembic upgrade head
+    # Downgrade and delete versions specific .py file
+    alembic downgrade -1
+    ```
+
 
 ### References
 1. [Get Started With Alembic SQLAlchemy](https://www.kimsereylam.com/sqlalchemy/2019/10/18/get-started-with-alembic.html)
 2. [Schema migrations with Alembic, Python and PostgreSQL](https://www.compose.com/articles/schema-migrations-with-alembic-python-and-postgresql/)
 3. [FastAPI with Async SQLAlchemy, SQLModel, and Alembic](https://testdriven.io/blog/fastapi-sqlmodel/)
+4. [How to get Alembic to recognise SQLModel database model?](https://stackoverflow.com/questions/68932099/how-to-get-alembic-to-recognise-sqlmodel-database-model)
+5. [jonra1993/fastapi-sqlmodel-alembic](https://github.com/jonra1993/fastapi-sqlmodel-alembic)
+6. [ChristopherGS/ultimate-fastapi-tutorial](https://github.com/ChristopherGS/ultimate-fastapi-tutorial)
+7. [The Ultimate FastAPI Tutorial Part 7 - Database Setup with SQLAlchemy and Alembic](https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-7-sqlalchemy-database-setup/#alembic)
