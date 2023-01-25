@@ -16,3 +16,17 @@ sqlite3 -nullvalue null
 .schema visitor
 select * from visitor limit 5;
 ```
+
+### Interesting Questions
+1. How to do database migration easily?
+    - Adding new columns
+    - Adding new indices
+    - Overall redesign of database schemas
+        - If so, backfill?
+2. How to design an user-post-comment-record relationship?
+3. Can we do ab-testing for frontend?
+
+### References
+1. [In-Depth Guide to Backend Route Design](https://softgrade.org/in-depth-guide-to-backend-route-design/)
+2. [Best practices for REST API design](https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/)
+3. [Relationship back_populates](https://sqlmodel.tiangolo.com/tutorial/relationship-attributes/back-populates/)
