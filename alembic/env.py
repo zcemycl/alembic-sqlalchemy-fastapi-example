@@ -5,7 +5,11 @@ from sqlalchemy import engine_from_config, pool
 from sqlmodel import SQLModel
 
 from alembic import context
-from alembic_sqlalchemy_fastapi_example.definitions.dataclasses import Visitor
+from alembic_sqlalchemy_fastapi_example.definitions.dataclasses import (
+    InternetProtocol,
+    Topic,
+    Visitor,
+)
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
