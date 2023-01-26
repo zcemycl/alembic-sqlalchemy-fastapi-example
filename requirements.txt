@@ -8,3 +8,4 @@ orjson
 logzero
 asyncio
 pydantic
+httpx
