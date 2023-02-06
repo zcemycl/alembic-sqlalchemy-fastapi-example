@@ -30,3 +30,5 @@ select * from visitor limit 5;
 1. [In-Depth Guide to Backend Route Design](https://softgrade.org/in-depth-guide-to-backend-route-design/)
 2. [Best practices for REST API design](https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/)
 3. [Relationship back_populates](https://sqlmodel.tiangolo.com/tutorial/relationship-attributes/back-populates/)
+4. [Hyperproductive API clients with FastAPI using OpenAPI Generator](https://gaganpreet.in/posts/hyperproductive-apis-fastapi/)
+5. [OpenAPI and CodeGen](https://medium.com/@almondcrush/openapi-and-codegen-e275e199ef13)
